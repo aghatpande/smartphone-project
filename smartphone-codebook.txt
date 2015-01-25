@@ -1,0 +1,25 @@
+---
+title: smartphone-codebook
+author: Ambarish Ghatpande
+date: January 19th. 2015
+---
+
+This is a codebook describing the variables in the tidy dataset 'smartphone-tidydata.txt'.
+
+The dataset has 181 rows and 88 columns.
+The first row has all the column names.
+The remaining 180 rows are divided as 6 rows per subject / volunteer. There were 30 subjects thus: 30 x 6 rows = 180 rows.
+
+Column 1: "subjectId" This gives the ID number of one of 30 subjects / volunteers in the project.
+
+Column 2: "activity_label" This is the descriptive activity label for each of 6 distinct activities identified for each subject by the software written by the original project team.
+
+Column 3 through Column 88 : each of these columns specify either mean or standard deviations of parameters calculated from the raw data.
+        e.g.: column 3: "tBodyAcc-mean()-X" is likely the mean acceleration of each subject's body in the X direction
+              column 4: "tBodyAcc-mean()-Y" is likely the mean acceleration of each subject's body in the Y direction
+
+In general, there are two types of parameters: those derived from the accelerometer contain the abbreviation "Acc" in their name, while the parameters obtained from the gyroscope contain the abbreviation "Gyro" or "angle" in their names. 
+
+Also, each parameter originally measured as a time-series contains a 't' in its name e.g. "tBodyAcc-mean()-X". Each of these time-domain parameters have been Fourier transformed to give a frequency domain parameter. These frequency domain parameters contain an 'f' in their names. e.g. "fBodyAcc-mean()-X"
+
+Accelerometer data is further subdivided into gravitational acceleration (contains 'grav' in name) and body acceleration (contains "BodyAcc" in name). 
